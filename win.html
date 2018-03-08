@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Memory Game </title>
+        <link rel="stylesheet" type="text/css" href="/styles/win.css">
+    </head>
+    <body bgcolor=#1C7430>
+        <div class="winimg"> 
+            <img src="/images/Group 2.png">  
+        </div>
+        <p> Поздравляем!
+            <br>
+            Ваш итоговый счет: <var class="score">0</var> 
+        </p>
+        <div class="again">
+            <a href="/game"> Еще раз </a>
+        </div>
+        <script type="text/javascript">
+            var url = new URL(window.location.href);
+            var score = url.searchParams.get("score");
+            var pointsNumber = document.querySelector('.score');
+            if(!!score){
+                pointsNumber.textContent = score;
+            }
+        </script>
+    </body>
+</html>
